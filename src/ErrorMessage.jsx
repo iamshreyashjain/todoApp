@@ -5,7 +5,7 @@ function ErrorMessage(){
     const {todoItems} = useContext(todoItemContext)
     return(
         <>
-            {todoItems.length === 0 && <h1>Enjoy your day</h1>}
+            {todoItems.length === 0 && <h1>No Task for Today</h1>}
         </>
     )
 }

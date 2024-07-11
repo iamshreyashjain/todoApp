@@ -7,18 +7,6 @@ import { todoItemContext } from "./store/todo-item-store";
 
 function App() {
    let initialtodoItems = [
-    {
-      name: "Go to GYM",
-      date : "18/03/2024"
-    },
-    {
-      name : "Eat Burger",
-      date : "19/03/2024"
-    },
-    {
-      name : "Walk 400 Calories",
-      date : "17/03/2024"
-    },
 ]
 
 let [toItems, settoItems] = useState(initialtodoItems);

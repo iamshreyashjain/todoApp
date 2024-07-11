@@ -4,9 +4,10 @@ body{
 
 h1{
     color: rgba(255, 24, 24, 0.333);
-    font-weight: 100;
+    font-weight: 200;
     margin: 10px;
     border-bottom: 1px solid rgba(255, 24, 24, 0.333);
+    display: inline;
 }
 input{
     width: 50%;
