@@ -16,9 +16,9 @@ const { todoItems } = useContext(todoItemContext);
 //the todoItems value from it. Here's how it works:
 return (
     <>
-    {todoItems.map((items, index) => (
+    {todoItems.map((items, index, ) => (
         <div key={index}>
-          <Items task={items.name} date={items.date}></Items>
+          <Items task={items.name} date={items.date} id ={items.id} ></Items>
         </div>
       ))}
     </>

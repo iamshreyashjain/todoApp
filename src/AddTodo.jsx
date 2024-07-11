@@ -6,20 +6,19 @@ function AddTodo() {
   const { addNewItem, todoItems } = useContext(todoItemContext);
   const [task, setTask] = useState("");
   const [date, setDate] = useState("");
+  const [id, setid] = useState(1)
 
   const onNewTask = (e) => {
     setTask(e.target.value);
-    console.log("Task updated: ", e.target.value); // Debugging log
   }
 
   const onNewDate = (e) => {
     setDate(e.target.value);
-    console.log("Date updated: ", e.target.value); // Debugging log
   }
 
   const handleAddButtonClick = (event) => {
-    event.preventDefault();  // Prevent default form submission
-    console.log("Button clicked"); // Debugging log
+    console.log(id)
+    event.preventDefault();
 
     if (todoItems.some(item => item.name === task) && todoItems.some(item => item.date === date)) {
       alert("This task already exists.");
@@ -33,10 +32,10 @@ function AddTodo() {
     } else if (date === "") {
       alert('Please add a date');
     } else {
-      addNewItem(task, date);
-      console.log("Task added:", task, date); // Debugging log
+      addNewItem(task, date, id);
       setTask("");
       setDate("");
+      setid(()=>id+1)
     }
   }
 

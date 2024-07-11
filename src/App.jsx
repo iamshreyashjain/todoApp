@@ -10,13 +10,13 @@ function App() {
 
 let [toItems, settoItems] = useState(initialtodoItems);
 
- let addNewItem = (name, date)=>{
-      let newTodoItems =  [...toItems, {name: name, date: date}];
+ let addNewItem = (name, date, id)=>{
+      let newTodoItems =  [...toItems, {name: name, date: date, id: id}];
       settoItems(newTodoItems);
  }
 
- let deleteItem = (task) =>{
-  let newTodoItems = toItems.filter((n) => n.name !== task);
+ let deleteItem = (id) =>{
+  let newTodoItems = toItems.filter((n) => n.id !== id);
   settoItems(newTodoItems);
  }
  return (

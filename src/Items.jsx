@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { todoItemContext } from "./store/todo-item-store";
 
-function Items({task, date}) {
+function Items({task, date, id}) {
   const {deleteItem}  = useContext(todoItemContext);
   return (
     <div className="row m-3">
@@ -12,8 +12,8 @@ function Items({task, date}) {
         <button  
           type="button" 
           className="btn btn-danger"
-          key={task}
-          onClick={()=>deleteItem(task)}
+          key={id}
+          onClick={()=>deleteItem(id)}
           ><RiDeleteBin6Line  />
           </button>
       </div>
