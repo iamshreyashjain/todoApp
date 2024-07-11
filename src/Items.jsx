@@ -15,7 +15,7 @@ function Items({task, date, id}) {
           className="btn btn-danger col-lg-8"
           key={id}
           onClick={()=>deleteItem(id)}
-          ><RiDeleteBin6Line className="mb-2" />
+          ><RiDeleteBin6Line className="mb-4" />
           </button>
       </div>
     </div>

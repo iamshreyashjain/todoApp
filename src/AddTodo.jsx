@@ -5,7 +5,7 @@ import { todoItemContext } from "./store/todo-item-store";
 function AddTodo() {
   const { addNewItem, todoItems } = useContext(todoItemContext);
   const [task, setTask] = useState("");
-  const [date, setDate] = useState("");
+  const [date, setDate] = useState(Date.now());
   const [id, setid] = useState(1)
 
   const onNewTask = (e) => {
