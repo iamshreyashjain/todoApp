@@ -40,27 +40,27 @@ function AddTodo() {
   }
 
   return (
-    <form className="row mx-3" onSubmit={handleAddButtonClick}>
-      <div className="col-5">
+    <div className="d-flex flex-row col-lg-12 justify-content-around mx-3" onSubmit={handleAddButtonClick}>
+      <div className="col-lg-5 col-4">
         <input type="text" 
                value={task} 
                onChange={onNewTask}
-               className="rounded border border-2 border-dark-subtle">
+               className="col-lg-6 col-12 rounded border border-2 border-dark-subtle">
         </input>
       </div>
-      <div className="col-5">
+      <div className="col-lg-5  col-4">
         <input type="date" 
                value={date}
                onChange={onNewDate}
-               className="rounded border border-2 border-dark-subtle align-self-baseline">
+               className="col-lg-6 col-12 rounded border border-2 border-dark-subtle align-self-baseline">
         </input>
       </div>
-      <div className="col-2">
+      <div className="col-lg-2">
         <button type="submit" 
-                className="btn btn-success"><IoAdd size={20} />
+                className="col-lg-8  col-12 btn btn-success" style={{height: '30px'}}><IoAdd size={20} className="mb-5" />
         </button>
       </div>
-    </form>
+    </div>
   );
 }
 
