@@ -5,7 +5,7 @@ import { todoItemContext } from "./store/todo-item-store";
 function AddTodo() {
   const { addNewItem, todoItems } = useContext(todoItemContext);
   const [task, setTask] = useState("");
-  const [date, setDate] = useState(Date.now());
+  const [date, setDate] = useState('12/04/2024');
   const [id, setid] = useState(1)
 
   const onNewTask = (e) => {
@@ -46,7 +46,7 @@ function AddTodo() {
                value={task} 
                onChange={onNewTask}
                className="col-lg-6 col-12 rounded border border-2 border-dark-subtle"
-               style={{minHeight:'30px'}}>
+               style={{height:'30px'}}>
         </input>
       </div>
       <div className="col-lg-5  col-4">
@@ -54,7 +54,7 @@ function AddTodo() {
                value={date}
                onChange={onNewDate}
                className="col-lg-6 col-12 rounded border border-2 border-dark-subtle align-self-baseline"
-               style={{minHeight:'30px'}}>
+               style={{height:'30px'}}>
         </input>
       </div>
       <div className="col-lg-2">
