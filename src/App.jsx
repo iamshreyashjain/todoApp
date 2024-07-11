@@ -6,13 +6,11 @@ import { useState } from "react";
 import { todoItemContext } from "./store/todo-item-store";
 
 function App() {
-   let initialtodoItems = [
-]
+   let initialtodoItems = []
 
 let [toItems, settoItems] = useState(initialtodoItems);
 
  let addNewItem = (name, date)=>{
-      // console.log(name, date);
       let newTodoItems =  [...toItems, {name: name, date: date}];
       settoItems(newTodoItems);
  }

@@ -2,63 +2,67 @@ import { useContext, useState } from "react";
 import { IoAdd } from "react-icons/io5";
 import { todoItemContext } from "./store/todo-item-store";
 
-
-
 function AddTodo() {
-  const {addNewItem} = useContext(todoItemContext);
-  
-  
-  let [task, setTask] = useState("");
-  let [date, setDate] = useState("");
+  const { addNewItem, todoItems } = useContext(todoItemContext);
+  const [task, setTask] = useState("");
+  const [date, setDate] = useState("");
 
-  let onNewTask = (e) => {
+  const onNewTask = (e) => {
     setTask(e.target.value);
+    console.log("Task updated: ", e.target.value); // Debugging log
   }
-  let onNewDate = (e) => {
+
+  const onNewDate = (e) => {
     setDate(e.target.value);
+    console.log("Date updated: ", e.target.value); // Debugging log
   }
-  
-  let handleAddButtonClick = (event) =>{
-    if(task==="" && date === ""){
-      alert('Please Add task and date');
+
+  const handleAddButtonClick = (event) => {
+    event.preventDefault();  // Prevent default form submission
+    console.log("Button clicked"); // Debugging log
+
+    if (todoItems.some(item => item.name === task) && todoItems.some(item => item.date === date)) {
+      alert("This task already exists.");
+      return;
     }
-    else if(task === "") {
-      alert('Please Add Task');
-    }
-    else if(date === "") {
-      alert('Please Add Date ');
-    }
-    else  {
+
+    if (task === "" && date === "") {
+      alert('Please add a task and date');
+    } else if (task === "") {
+      alert('Please add a task');
+    } else if (date === "") {
+      alert('Please add a date');
+    } else {
       addNewItem(task, date);
-      setTask("")
-      setDate("")
+      console.log("Task added:", task, date); // Debugging log
+      setTask("");
+      setDate("");
     }
-    event.preventDefault();
   }
+
   return (
-    <form className="row" onSubmit={handleAddButtonClick} >
-      <div className="col-6">
-          <input type="text" 
-            value ={task} 
-            onChange = {onNewTask}
-            className="rounded border border-2 border-dark-subtle">
-          </input>
-        </div>
-        <div className="col-4">
-          <input type="date" 
-            value={date}
-            onChange = {onNewDate}
-            className="rounded border border-2 border-dark-subtle"
-            >
-          </input>
-        </div>
-        <div className="col-2">
+    <form className="row mx-3" onSubmit={handleAddButtonClick}>
+      <div className="col-5">
+        <input type="text" 
+               value={task} 
+               onChange={onNewTask}
+               className="rounded border border-2 border-dark-subtle">
+        </input>
+      </div>
+      <div className="col-5">
+        <input type="date" 
+               value={date}
+               onChange={onNewDate}
+               className="rounded border border-2 border-dark-subtle align-self-baseline">
+        </input>
+      </div>
+      <div className="col-2">
         <button type="submit" 
-                className="btn btn-success"
-                style={{width: "80px"}}><IoAdd size={20}/>
+                className="btn btn-success"><IoAdd size={20} />
         </button>
       </div>
     </form>
   );
 }
+
 export default AddTodo;

@@ -1,6 +1,4 @@
-body{
-    margin: 10px;
-}
+
 
 h1{
     color: rgba(255, 24, 24, 0.333);
@@ -9,12 +7,4 @@ h1{
     border-bottom: 1px solid rgba(255, 24, 24, 0.333);
     display: inline;
 }
-input{
-    width: 50%;
-}
-.item-container{
-    text-align: left;
-}
-button{
-    margin-bottom: 30px;
-}
+
