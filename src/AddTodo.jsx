@@ -40,19 +40,21 @@ function AddTodo() {
   }
 
   return (
-    <div className="d-flex flex-row col-lg-12 justify-content-around mx-3" onSubmit={handleAddButtonClick}>
+    <form className="d-flex flex-row col-lg-12 justify-content-around mx-3" onSubmit={handleAddButtonClick}>
       <div className="col-lg-5 col-4">
         <input type="text" 
                value={task} 
                onChange={onNewTask}
-               className="col-lg-6 col-12 rounded border border-2 border-dark-subtle">
+               className="col-lg-6 col-12 rounded border border-2 border-dark-subtle"
+               style={{minHeight:'30px'}}>
         </input>
       </div>
       <div className="col-lg-5  col-4">
         <input type="date" 
                value={date}
                onChange={onNewDate}
-               className="col-lg-6 col-12 rounded border border-2 border-dark-subtle align-self-baseline">
+               className="col-lg-6 col-12 rounded border border-2 border-dark-subtle align-self-baseline"
+               style={{minHeight:'30px'}}>
         </input>
       </div>
       <div className="col-lg-2">
@@ -60,7 +62,7 @@ function AddTodo() {
                 className="col-lg-8  col-12 btn btn-success" style={{height: '30px'}}><IoAdd size={20} className="mb-5" />
         </button>
       </div>
-    </div>
+    </form>
   );
 }
 
