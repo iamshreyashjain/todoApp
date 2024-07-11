@@ -5,7 +5,7 @@ import { todoItemContext } from "./store/todo-item-store";
 function AddTodo() {
   const { addNewItem, todoItems } = useContext(todoItemContext);
   const [task, setTask] = useState("");
-  const [date, setDate] = useState('12/04/2024');
+  const [date, setDate] = useState('');
   const [id, setid] = useState(1)
 
   const onNewTask = (e) => {
@@ -51,6 +51,7 @@ function AddTodo() {
       </div>
       <div className="col-lg-5  col-4">
         <input type="date" 
+              placeholder="Add Date"
                value={date}
                onChange={onNewDate}
                className="col-lg-6 col-12 rounded border border-2 border-dark-subtle align-self-baseline"
