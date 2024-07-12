@@ -49,7 +49,7 @@ function AddTodo() {
       <div className="col-lg-4 col-4"></div>
     </div>
       
-    <form className="d-flex flex-row col-lg-10 justify-content-around rounded border-bottom border-4 border-warning   justify-content-around  shadow py-2" onSubmit={handleAddButtonClick} style={{backgroundColor: 'white'}}>
+    <form className="d-flex flex-row col-lg-10 justify-content-around rounded border-bottom border-4 border-warning   justify-content-around  shadow py-2 mx-3" onSubmit={handleAddButtonClick} style={{backgroundColor: 'white'}}>
       <div className="col-lg-4 col-4">
         <input type="text" 
                value={task} 
