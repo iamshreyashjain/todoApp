@@ -47,7 +47,7 @@ function AddTodo() {
                onChange={onNewTask}
                className="col-lg-6 col-12 rounded border border-2 border-dark-subtle"
                placeholder="Add Text"
-               style={{minHeight:'33px', maxHeight :'33px', outline: 'none'}}>
+               style={{height :'33px', outline: 'none'}}>
         </input>
       </div>
       <div className="col-lg-5  col-4">
@@ -61,7 +61,7 @@ function AddTodo() {
       </div>
       <div className="col-lg-2">
         <button type="submit" 
-                className="col-lg-8  col-12 btn btn-success" style={{height: '30px'}}><IoAdd size={20} className="mb-5" />
+                className="col-lg-8  col-12 btn btn-success" style={{height: '33px'}}><IoAdd size={20} className="mb-5" />
         </button>
       </div>
     </form>
