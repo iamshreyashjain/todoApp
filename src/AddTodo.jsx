@@ -54,7 +54,7 @@ function AddTodo() {
         <input type="text" 
                value={task} 
                onChange={onNewTask}
-               className="col-lg-6 col-10  border border-2 rounded border-dark-subtle"
+               className="col-lg-6 col-11  border border-2 rounded border-dark-subtle"
                style={{height :'33px', outline: 'none', border:'none'}}>
         </input>
       </div>
@@ -62,7 +62,7 @@ function AddTodo() {
         <input type="date" 
                value={date}
                onChange={onNewDate}
-               className="col-lg-6 col-10 rounded border border-2 border-dark-subtle "
+               className="col-lg-6 col-11 rounded border border-2 border-dark-subtle "
                style={{minHeight:'30px', maxHeight :'30px', outline: 'none'}}>
         </input>
       </div>
