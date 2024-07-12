@@ -46,7 +46,8 @@ function AddTodo() {
                value={task} 
                onChange={onNewTask}
                className="col-lg-6 col-12 rounded border border-2 border-dark-subtle"
-               style={{minHeight:'32px', maxHeight :'32px', outline: 'none'}}>
+               placeholder="Add Text"
+               style={{minHeight:'33px', maxHeight :'33px', outline: 'none'}}>
         </input>
       </div>
       <div className="col-lg-5  col-4">
