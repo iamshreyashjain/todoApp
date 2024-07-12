@@ -1,11 +1,13 @@
 import { useContext, useState } from "react";
 import { IoAdd } from "react-icons/io5";
 import { todoItemContext } from "./store/todo-item-store";
+import { BiDisc } from "react-icons/bi";
+
 
 function AddTodo() {
   const { addNewItem, todoItems } = useContext(todoItemContext);
   const [task, setTask] = useState("");
-  const [date, setDate] = useState('');
+  const [date, setDate] = useState(Date.now());
   const [id, setid] = useState(1)
 
   const onNewTask = (e) => {
@@ -40,31 +42,37 @@ function AddTodo() {
   }
 
   return (
-    <form className="d-flex flex-row col-lg-12 justify-content-around mx-3" onSubmit={handleAddButtonClick}>
-      <div className="col-lg-5 col-4">
+    <>
+    <div className="d-flex flex col-lg-10">
+    <h2 className="text-warning col-lg-4 col-4">Task</h2> 
+      <h2 className="text-warning col-lg-4 col-4">Date</h2>
+      <div className="col-lg-4 col-4"></div>
+    </div>
+      
+    <form className="d-flex flex-row col-lg-10 rounded border-bottom border-4 border-warning gap-2 justify-content-around mx-3 shadow py-2" onSubmit={handleAddButtonClick} style={{backgroundColor: 'white'}}>
+      <div className="col-lg-4 col-4">
         <input type="text" 
                value={task} 
                onChange={onNewTask}
-               className="col-lg-6 col-12 rounded border border-2 border-dark-subtle"
-               placeholder="Add Text"
-               style={{height :'33px', outline: 'none'}}>
+               className="col-lg-6 col-12  border border-2 rounded border-dark-subtle"
+               style={{height :'33px', outline: 'none', border:'none'}}>
         </input>
       </div>
-      <div className="col-lg-5  col-4">
+      <div className="col-lg-4  col-4">
         <input type="date" 
-              placeholder="Add Date"
                value={date}
                onChange={onNewDate}
-               className="col-lg-6 col-12 rounded border border-2 border-dark-subtle align-self-baseline"
+               className="col-lg-6 col-12 rounded border border-2 border-dark-subtle "
                style={{minHeight:'30px', maxHeight :'30px', outline: 'none'}}>
         </input>
       </div>
-      <div className="col-lg-2">
+      <div className="col-lg-4 col-4">
         <button type="submit" 
-                className="col-lg-8  col-12 btn btn-success" style={{height: '33px'}}><IoAdd size={20} className="mb-5" />
+                className="col-lg-4  btn btn-success" style={{height: '33px'}}><IoAdd size={20} className="mb-5" />
         </button>
       </div>
     </form>
+    </>
   );
 }
 
