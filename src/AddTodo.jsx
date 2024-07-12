@@ -46,7 +46,7 @@ function AddTodo() {
                value={task} 
                onChange={onNewTask}
                className="col-lg-6 col-12 rounded border border-2 border-dark-subtle"
-               style={{height:'30px', outline: 'none'}}>
+               style={{minHeight:'30px', outline: 'none'}}>
         </input>
       </div>
       <div className="col-lg-5  col-4">
@@ -55,7 +55,7 @@ function AddTodo() {
                value={date}
                onChange={onNewDate}
                className="col-lg-6 col-12 rounded border border-2 border-dark-subtle align-self-baseline"
-               style={{height:'30px', outline: 'none'}}>
+               style={{minHeight:'30px', outline: 'none'}}>
         </input>
       </div>
       <div className="col-lg-2">
