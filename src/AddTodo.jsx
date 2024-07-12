@@ -49,12 +49,12 @@ function AddTodo() {
       <div className="col-lg-4 col-4"></div>
     </div>
       
-    <form className="d-flex flex-row col-lg-10 rounded border-bottom border-4 border-warning gap-2 justify-content-around mx-3 shadow py-2" onSubmit={handleAddButtonClick} style={{backgroundColor: 'white'}}>
+    <form className="d-flex flex-row col-lg-10 justify-content-around rounded border-bottom border-4 border-warning   justify-content-around  shadow py-2" onSubmit={handleAddButtonClick} style={{backgroundColor: 'white'}}>
       <div className="col-lg-4 col-4">
         <input type="text" 
                value={task} 
                onChange={onNewTask}
-               className="col-lg-6 col-12  border border-2 rounded border-dark-subtle"
+               className="col-lg-6 col-10  border border-2 rounded border-dark-subtle"
                style={{height :'33px', outline: 'none', border:'none'}}>
         </input>
       </div>
@@ -62,7 +62,7 @@ function AddTodo() {
         <input type="date" 
                value={date}
                onChange={onNewDate}
-               className="col-lg-6 col-12 rounded border border-2 border-dark-subtle "
+               className="col-lg-6 col-10 rounded border border-2 border-dark-subtle "
                style={{minHeight:'30px', maxHeight :'30px', outline: 'none'}}>
         </input>
       </div>
