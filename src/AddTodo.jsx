@@ -50,23 +50,23 @@ function AddTodo() {
     </div>
       
     <form className="d-flex flex-row col-lg-10 justify-content-around rounded border-bottom border-4 border-warning   justify-content-around  shadow py-2 mx-3" onSubmit={handleAddButtonClick} style={{backgroundColor: 'white'}}>
-      <div className="col-lg-4 col-4">
+      <div className="col-lg-4 col-5">
         <input type="text" 
                value={task} 
                onChange={onNewTask}
-               className="col-lg-6 col-11  border border-2 rounded border-dark-subtle"
+               className="col-lg-6 col-10  border border-2 rounded border-dark-subtle"
                style={{height :'33px', outline: 'none', border:'none'}}>
         </input>
       </div>
-      <div className="col-lg-4  col-4">
+      <div className="col-lg-4  col-5">
         <input type="date" 
                value={date}
                onChange={onNewDate}
-               className="col-lg-6 col-11 rounded border border-2 border-dark-subtle "
+               className="col-lg-6 col-10  rounded border border-2 border-dark-subtle "
                style={{minHeight:'30px', maxHeight :'30px', outline: 'none'}}>
         </input>
       </div>
-      <div className="col-lg-4 col-4">
+      <div className="col-lg-4 col-2">
         <button type="submit" 
                 className="col-lg-4  btn btn-success" style={{height: '33px'}}><IoAdd size={20} className="mb-5" />
         </button>

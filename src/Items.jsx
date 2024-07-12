@@ -8,9 +8,9 @@ function Items({task, date, id}) {
   const {deleteItem}  = useContext(todoItemContext);
   return (
     <div className="d-flex flex col-lg-10 mx-3 shadow  border-bottom  border-4 border-warning rounded  p-2 gap-2 mt-4" style={{backgroundColor: "white"}}>
-      <div className="col-lg-4 col-4 " >{task}</div> 
-      <div className="col-lg-4 col-4">{date}</div>
-      <div className="col-lg-4 col-4">
+      <div className="col-lg-4 col-5 text-break" >{task}</div> 
+      <div className="col-lg-4 col-5 ">{date}</div>
+      <div className="col-lg-4 col-1">
         <button  
           style={{height: '30px'}}
           type="button" 
