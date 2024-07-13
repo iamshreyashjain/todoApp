@@ -44,8 +44,8 @@ function AddTodo() {
   return (
     <>
     <div className="d-flex flex col-lg-10">
-    <h2 className="text-warning col-lg-4 col-4">Task</h2> 
-      <h2 className="text-warning col-lg-4 col-4">Date</h2>
+    <h2 className=" col-lg-4 col-4">Task</h2> 
+      <h2 className=" col-lg-4 col-4">Date</h2>
       <div className="col-lg-4 col-4"></div>
     </div>
       
